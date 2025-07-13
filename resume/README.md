@@ -1,4 +1,4 @@
-# resume
+# prapas.resume
 
 ## Project setup
 ```
