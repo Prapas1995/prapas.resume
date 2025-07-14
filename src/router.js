@@ -14,12 +14,12 @@ const Router = new VueRouter({
   routes: [
     {
       path: '/',
-      component: () => import('./pages/index.vue'),
+      component: () => import('./pages/comingSoon.vue'),
       children: [
         {
           name: 'resume',
           path: '/',
-          component: () => import('./pages/index.vue'),
+          component: () => import('./pages/comingSoon.vue'),
           meta: {
             title: 'Resume',
           }
