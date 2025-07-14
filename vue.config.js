@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: '/prapas.resume/'
+  publicPath: '/prapas.resume/',
+  lintOnSave: false,
 })
