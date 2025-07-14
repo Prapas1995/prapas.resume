@@ -1,0 +1,190 @@
+.main-color {
+  color: $main-color !important;
+}
+
+.white-color {
+  color: $white-color !important;
+}
+
+.grey-color {
+  color: $grey-color !important;
+}
+
+.text-red {
+  color: red;
+}
+.text-green {
+  color: green;
+}
+.text-blue {
+  color: #4b8ee0;
+}
+.text-grey, .text-expired {
+  color: #999;
+}
+.text-light-grey {
+  color: #d0d3d6;
+}
+.text-dark-grey {
+  color: #8c8c8c;
+}
+.text-white {
+  color: white;
+}
+.bg-main-color {
+  background-color: $main-color;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-light-grey {
+  background-color: #f8f8f8;
+}
+.bg-grey {
+  background-color: #eee;
+}
+.bg-dark-grey {
+  background-color: #444;
+}
+.bg-none {
+  background: none !important;
+}
+.hover {
+  @include transition(background-color 0.3s linear);
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+.btn-white {
+  border-color: white;
+  background-color: white;
+  @include transition(all 0.3s linear);
+
+  &:hover,  &:active,  &:focus {
+    border-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.38);
+  }
+
+  &-outline {
+    border-color: white;
+    color: white;
+    @include transition(background-color 0.3s linear);
+    padding: 6px 25px;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: white;
+      color: $main-color;
+    }
+  }
+}
+
+.btn-black {
+  color: white;
+  border-color: black;
+  background-color: black;
+
+  &-outline {
+    border-color: black;
+    color: black;
+    @include transition(all 0.3s linear);
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.btn-grey {
+  color: white;
+  border-color: #999;
+  background-color: #999;
+
+  &-outline {
+    border-color: #999;
+    color: #999;
+    @include transition(all 0.3s linear);
+
+    &:hover {
+      background-color: #999;
+      color: white;
+    }
+  }
+}
+
+.btn-red {
+  color: white !important;
+  border-color: $main-color;
+  background-color: $main-color;
+
+  &-outline {
+    border-color: $main-color !important;
+    color: $main-color;
+    @include transition(all 0.3s linear);
+    padding: 6px 25px;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: $main-color;
+      color: white;
+    }
+  }
+}
+
+.btn-green {
+  color: white !important;
+  border-color: green;
+  background-color: green;
+
+  &-outline {
+    border-color: green;
+    color: green;
+    @include transition(all 0.3s linear);
+
+    &:hover {
+      background-color: green;
+      color: white;
+    }
+  }
+}
+
+.btn-yellow {
+  color: white !important;
+  border-color: yellow;
+  background-color: yellow;
+
+  &-outline {
+    border-color: yellow;
+    color: yellow;
+    @include transition(all 0.3s linear);
+
+    &:hover {
+      background-color: yellow;
+      color: white;
+    }
+  }
+}
+
+.btn-main-color {
+  color: white !important;
+
+  &:hover,
+  &:active {
+    &:before {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &-outline {
+    background-color: transparent;
+    @include transition(all 0.3s linear);
+  }
+
+  &-hover {
+    @include transition(all 0.3s linear);
+  }
+}

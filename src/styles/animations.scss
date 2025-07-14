@@ -1,0 +1,64 @@
+@include keyframes(rotate-360) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+.rotate-360 {
+  @include animation(rotate-360 0.5s ease-in-out infinite);
+}
+
+@include keyframes(rotate-180) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(180deg));
+  }
+}
+
+.rotate-180 {
+  @include animation(rotate-180 0.5s ease-in-out infinite);
+
+  &-once {
+    @include animation(rotate-180 0.5s ease-in-out);
+  }
+}
+
+@include keyframes(blink) {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  @include animation(blink 2s ease-in-out infinite);
+}
+
+@include keyframes(float-up-down) {
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    margin-top: -60px;
+    @include transform(scale(0.9))
+  }
+}
+
+.float-up-down {
+  @include animation(float-up-down 2s ease-in-out infinite);
+}
+
+@include keyframes(bg-fade-out) {
+  100% {
+    background-color: transparent;
+  }
+}
+
+.bg-fade-out {
+  @include animation(bg-fade-out 10s 1 forwards);
+}

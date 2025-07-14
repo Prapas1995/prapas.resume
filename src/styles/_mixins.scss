@@ -1,0 +1,175 @@
+// https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin input-placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin absolute-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin relative-reset {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+}
+
+@mixin transform($x) {
+  -webkit-transform: $x;
+	-moz-transform: $x;
+	-ms-transform: $x;
+	-o-transform: $x;
+	transform: $x;
+}
+
+@mixin transform-origin($x) {
+  -webkit-transform-origin: $x;
+	-moz-transform-origin: $x;
+	-ms-transform-origin: $x;
+	-o-transform-origin: $x;
+	transform-origin: $x;
+}
+
+@mixin transition($x) {
+  -webkit-transition: $x;
+	-moz-transition: $x;
+	-ms-transition: $x;
+	-o-transition: $x;
+	transition: $x;
+}
+
+@mixin filter($filter-type,$filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+@mixin text-nowrap-ellip{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin column-count($x) {
+  -webkit-column-count: $x;
+	-moz-column-count: $x;
+	column-count: $x;
+	-moz-columns: $x;
+  columns: $x;
+}
+
+@mixin column-gap($x) {
+  -webkit-column-gap: $x;
+	-moz-column-gap: $x;
+	column-gap: $x;
+}
+
+@mixin column-fill($x) {
+  -webkit-column-fill: $x;
+	-moz-column-fill: $x;
+	column-fill: $x;
+}
+
+@mixin column-break-inside($x) {
+  -webkit-column-break-inside: $x;
+	page-break-inside: $x;
+	break-inside: $x;
+}
+
+@mixin animation($animations) {
+    -webkit-animation: $animations;
+    -moz-animation: $animations;
+		-ms-animation: $animations;
+    -o-animation: $animations;
+    animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+		@-ms-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+/* have to have dot dot dot because parameter has comma */
+@mixin border-gradient($x...) {
+	-webkit-border-image: -webkit-linear-gradient($x);
+	-moz-border-image: -moz-linear-gradient($x);
+	border-image: linear-gradient($x);
+	border-image-slice: 1;
+}

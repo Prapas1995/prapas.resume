@@ -15,8 +15,9 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style lang="scss" scoped>
-  coming-soon {
-    margin: 40px 0 0;
+  .coming-soon {
+    font-size: 24px;
+    font-weight: 500;
   }
   </style>
   

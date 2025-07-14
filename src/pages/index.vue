@@ -1,6 +1,7 @@
 <template>
-    <div id="homepage">
-      <HelloWorld/>
+    <div id="resume">
+      <!-- <HelloWorld/> -->
+      <comingSoon/>
     </div>
   </template>
   
@@ -8,7 +9,8 @@
   // @ is an alias to /src
   export default {
     components: {
-        HelloWorld: () => import('@/components/HelloWorld.vue')
+        // HelloWorld: () => import('@/components/HelloWorld.vue')
+        comingSoon: () => import('@/components/comingSoon.vue')
     }
   }
   </script>

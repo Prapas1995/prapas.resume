@@ -21,7 +21,7 @@ const Router = new VueRouter({
           path: '/',
           component: () => import('./pages/comingSoon.vue'),
           meta: {
-            title: 'Resume',
+            title: 'Prapas Jonkaenboon',
           }
         }
       ]
