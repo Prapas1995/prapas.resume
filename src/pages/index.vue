@@ -1,10 +1,10 @@
 <template>
   <div id="resume">
-    <FullLoading />
+    <HeaderSection/>
+    <!-- <FullLoading />
     <ProfileSection/>
-    <ContactUsSection/>
     <InformationSection/>
-    <TechStackSection/>
+    <TechStackSection/> -->
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
     ProfileSection: () => import("@/components/ProfileSection.vue"),
     InformationSection: () => import("@/components/InformationSection.vue"),
     TechStackSection: () => import("@/components/TechStackSection.vue"),
-    ContactUsSection: () => import("@/components/ContactUsSection.vue"),
+    HeaderSection: () => import("@/components/HeaderSection.vue"),
   },
 };
 </script>
