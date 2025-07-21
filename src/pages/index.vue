@@ -1,6 +1,6 @@
 <template>
   <div id="resume">
-    <!-- <Information/> -->
+    <Information/>
     <FullLoading />
   </div>
 </template>
