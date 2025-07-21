@@ -1,9 +1,9 @@
 <template>
   <div id="resume">
+    <!-- <FullLoading /> -->
     <HeaderSection/>
-    <!-- <FullLoading />
-    <ProfileSection/>
-    <InformationSection/>
+    <IntroSection/>
+    <!-- <InformationSection/>
     <TechStackSection/> -->
   </div>
 </template>
@@ -13,10 +13,13 @@
 export default {
   components: {
     FullLoading: () => import("@/components/FullLoading.vue"),
-    ProfileSection: () => import("@/components/ProfileSection.vue"),
+    IntroSection: () => import("@/components/IntroSection.vue"),
     InformationSection: () => import("@/components/InformationSection.vue"),
     TechStackSection: () => import("@/components/TechStackSection.vue"),
     HeaderSection: () => import("@/components/HeaderSection.vue"),
   },
 };
 </script>
+<style lang="scss">
+  @import "@/styles/global.scss";
+</style>

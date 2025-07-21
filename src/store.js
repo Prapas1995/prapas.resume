@@ -9,11 +9,12 @@ Vue.use(VueMeta)
 
 export default new Vuex.Store({
   state: {
+    htmlScrollTop: 0,
+    isFullLoading: true,
+    // 
     authUser: null,
     browseMenuOpened: true,
     dayList: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].map(e => ({ name: e, short: e.substr(3), shortest: e.substr(1) })),
-    htmlScrollTop: 0,
-    isFullLoading: true,
     locale: 'en',
     monthList: [
       { id: 1, name: 'January', short: 'Jan', count: 31 },
