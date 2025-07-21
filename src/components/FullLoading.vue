@@ -57,11 +57,11 @@ export default {
     loading() {
       anime({
         targets: "span",
-        scale: [5, 1],
+        scale: [0, 1],
         duration: 500,
         opacity: [0, 1],
         delay: anime.stagger(150, { start: 150 }),
-        loop: true,
+        // loop: true,
         complete: () => {
           this.$store.commit("SET_STATE", {
             name: "isFullLoading",

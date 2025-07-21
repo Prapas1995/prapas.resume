@@ -1,19 +1,19 @@
 <template>
-    <div class="name">
-      Prapas Jongkaenboon
+    <div class="information-section">
+      InformationSection
     </div>
   </template>
   
   <script>
   export default {
-    name: 'Information',
+    name: 'InformationSection',
     props: {
       msg: String
     }
   }
   </script>
   <style lang="scss" scoped>
-  .name {
+  .information-section {
     font-size: 24px;
     font-weight: 700;
   }
