@@ -1,6 +1,6 @@
 <template>
   <div id="resume">
-    <!-- <FullLoading /> -->
+    <FullLoading />
     <HeaderSection/>
     <IntroSection/>
     <InformationSection/>
