@@ -1,6 +1,8 @@
 <template>
     <div class="tech-stack-section">
-        TechStackSection
+      <span>
+        TechStackSection 084-3935488
+      </span>
     </div>
   </template>
   
@@ -14,8 +16,7 @@
   </script>
   <style lang="scss" scoped>
   .tech-stack-section {
-    font-size: 24px;
-    font-weight: 700;
+    padding: 0px;
   }
   </style>
   

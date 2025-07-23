@@ -1,6 +1,14 @@
 <template>
     <div class="information-section">
-      InformationSection
+      <span class="is-text">InformationSection 084-3935488</span>
+      <h1 class="is-text">InformationSection  084-3935488</h1>
+      <h1 class="is-text">InformationSection  084-3935488</h1>
+      <h1 class="is-text">InformationSection  084-3935488</h1>
+      <h1 class="is-text">InformationSection  084-3935488</h1>
+      <h1 class="is-text">InformationSection  084-3935488</h1>
+      <h1 class="is-text">InformationSection  084-3935488</h1>
+      <h1 class="is-text">InformationSection  084-3935488</h1>
+      <h1 class="is-text">InformationSection  084-3935488</h1>
     </div>
   </template>
   
@@ -14,8 +22,7 @@
   </script>
   <style lang="scss" scoped>
   .information-section {
-    font-size: 24px;
-    font-weight: 700;
+    padding: 0px;
   }
   </style>
   

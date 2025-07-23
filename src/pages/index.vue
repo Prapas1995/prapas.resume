@@ -3,8 +3,8 @@
     <!-- <FullLoading /> -->
     <HeaderSection/>
     <IntroSection/>
-    <!-- <InformationSection/>
-    <TechStackSection/> -->
+    <InformationSection/>
+    <TechStackSection/>
   </div>
 </template>
 
