@@ -50,7 +50,6 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.loading();
-      // this.loading3();
     });
   },
   methods: {
@@ -61,7 +60,6 @@ export default {
         duration: 500,
         opacity: [0, 1],
         delay: anime.stagger(150, { start: 150 }),
-        // loop: true,
         complete: () => {
           this.$store.commit("SET_STATE", {
             name: "isFullLoading",
