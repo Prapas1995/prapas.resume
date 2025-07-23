@@ -1,6 +1,6 @@
 <template>
-  <div id="full-loading" v-if="isShow" :class="{ 'fade-out': isHiding }">
-    <div class="flex-full-loading">
+  <div class="full-loading" v-if="isShow" :class="{ 'fade-out': isHiding }">
+    <div class="container flex-full-loading text-center">
       <h1>
         <span>P</span>
         <span>r</span>
@@ -76,7 +76,7 @@ export default {
 @import "../styles/_mixins.scss";
 @import "../styles/_variables.scss";
 
-#full-loading {
+.full-loading {
   position: fixed;
   top: 0;
   left: 0;
@@ -85,6 +85,10 @@ export default {
   background-color: black; //3c3c3c
   opacity: 1;
   z-index: 99999;
+
+  .container {
+    margin: 0 auto;
+  }
 
   @include transition(opacity 0.3s linear);
   &.fade-out {
