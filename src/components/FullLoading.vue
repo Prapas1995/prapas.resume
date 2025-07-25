@@ -95,7 +95,13 @@ export default {
     opacity: 0;
   }
   .flex-full-loading {
-    padding: 15% 0 0 0;
+    padding: 150px 0 0 0;
+    @media (min-width: 769px) and (max-width: 991px) {
+      padding: 120px 0 0 0;
+    }
+    @media (max-width: 768px) {
+      padding: 80px 0 0 0;
+    }
     h1 {
       font-family: "Geostar", serif;
       font-weight: 500;

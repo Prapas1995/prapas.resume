@@ -38,7 +38,7 @@
           <div class="hs-flex-img-social mr-3">
           <img :src="tiktok" class="hs-img-social" @click="clickTiktok"/>
           </div>
-          <div class="hs-flex-img-social mr-3">
+          <div class="hs-flex-img-social mr-0">
             <img :src="linkedin" class="hs-img-social" @click="clickLinkedin"/>
           </div>
         </div>
@@ -135,12 +135,31 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (min-width: 769px) and (max-width: 991px) {
+    }
+    @media (max-width: 768px) {
+      .hs-social-content {
+        display: none;
+      }
+    }
   }
   .hs-img-name {
     width: 280px;
+    @media (min-width: 769px) and (max-width: 1024px) {
+      width: 170px;
+    }
+    @media (max-width: 768px) {
+      width: 200px;
+    }
   }
   .hs-img-social {
     width: 38px;
+    @media (min-width: 769px) and (max-width: 1024px) {
+      width: 25px;
+    }
+    @media (max-width: 768px) {
+      width: 25px;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -152,6 +171,12 @@ export default {
     color: #ffffff;
     font-size: 16px;
     padding: 0 10px 0 5px;
+    @media (min-width: 769px) and (max-width: 1024px) {
+      font-size: 12px;
+    }
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 
   &.top {
