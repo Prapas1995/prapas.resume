@@ -99,16 +99,20 @@ export default {
       }
     },
     clickFacebook() {
-      return console.log('Facebook');
+      const url = 'https://www.facebook.com/TickerIndy';
+      return window.open(url, '_blank');
     },
     clickInstagram() {
-      return console.log('Instagram');
+      const url = 'https://www.instagram.com/ticker_1995';
+      return window.open(url, '_blank');
     },
     clickTiktok() {
-      return console.log('Tiktok');
+      const url = 'www.tiktok.com/@ticker1995';
+      return window.open(url, '_blank');
     },
-    clickLinkedin() {
-      return console.log('Linkedin');
+    clickLinkedin() { 
+      const url = 'https://www.linkedin.com/in/prapas-jongkaenboon-aa703127b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app';
+      return window.open(url, '_blank');
     },
   },
 };
