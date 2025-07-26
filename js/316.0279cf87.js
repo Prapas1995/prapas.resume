@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkprapas_resume"]=self["webpackChunkprapas_resume"]||[]).push([[316],{1316:function(n,s,e){e.r(s),e.d(s,{default:function(){return i}});var r=function(){var n=this,s=n._self._c;return s("div",{staticClass:"coming-soon"},[n._v(" Coming Soon ! ")])},u=[],a={name:"HelloWorld",props:{msg:String}},o=a,t=e(1656),l=(0,t.A)(o,r,u,!1,null,"3639a678",null),i=l.exports}}]);
-//# sourceMappingURL=316.0279cf87.js.map
