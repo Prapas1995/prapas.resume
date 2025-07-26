@@ -1,5 +1,5 @@
 <template>
-    <div class="information-section">
+    <div class="training-section">TrainingSection
       <span class="is-text">InformationSection 084-3935488</span>
       <h1 class="is-text">InformationSection  084-3935488</h1>
       <h1 class="is-text">InformationSection  084-3935488</h1>
@@ -29,14 +29,14 @@
   
   <script>
   export default {
-    name: 'InformationSection',
+    name: 'TrainingSection',
     props: {
       msg: String
     }
   }
   </script>
   <style lang="scss" scoped>
-  .information-section {
+  .training-section {
     padding: 0px;
   }
   </style>

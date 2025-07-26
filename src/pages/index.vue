@@ -3,7 +3,7 @@
     <FullLoading />
     <HeaderSection/>
     <IntroSection/>
-    <InformationSection/>
+    <TrainingSection/>
     <TechStackSection/>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
   components: {
     FullLoading: () => import("@/components/FullLoading.vue"),
     IntroSection: () => import("@/components/IntroSection.vue"),
-    InformationSection: () => import("@/components/InformationSection.vue"),
+    TrainingSection: () => import("@/components/TrainingSection.vue"),
     TechStackSection: () => import("@/components/TechStackSection.vue"),
     HeaderSection: () => import("@/components/HeaderSection.vue"),
   },
