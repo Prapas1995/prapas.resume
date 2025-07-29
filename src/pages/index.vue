@@ -4,7 +4,8 @@
     <HeaderSection/>
     <IntroSection/>
     <TrainingSection/>
-    <TechStackSection/>
+    <TechStackSection/> 
+    <FooterSection/> 
   </div>
 </template>
 
@@ -17,6 +18,7 @@ export default {
     TrainingSection: () => import("@/components/TrainingSection.vue"),
     TechStackSection: () => import("@/components/TechStackSection.vue"),
     HeaderSection: () => import("@/components/HeaderSection.vue"),
+    FooterSection: () => import("@/components/FooterSection.vue"),
   },
 };
 </script>
