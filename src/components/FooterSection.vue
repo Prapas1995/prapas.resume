@@ -1,6 +1,6 @@
 <template>
   <div class="footer-section">
-    <div class="container m-t-60">
+    <div class="container m-t-60 pb-8" style="padding-bottom: 20px;">
       <div class="text-center row">
         <div class="fs-flex-img-text col-md-12">
           <img class="fs-img" :src="prapas" alt="" />
