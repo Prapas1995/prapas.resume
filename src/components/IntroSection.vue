@@ -6,7 +6,7 @@
           class="is-flex-sub-text col-md-6"
         >
           <div :class="{ 'fadeInLeft animated': isAnimate }">
-            <h1 class="is-text-title">Hi, My name is [ Ticker ].</h1>
+            <h1 class="is-text-title">Hi, My name is Ticker.</h1>
             <h3 class="is-text-subtitle">I'm a software developer.</h3>
             <p class="is-text-detail">
               I graduated bachelor in Information Technology from Rajabhat Maha Sarakham University[Maha Sarakham],
