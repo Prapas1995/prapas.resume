@@ -11,6 +11,8 @@
 
 <script>
 // @ is an alias to /src
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 export default {
   components: {
     FullLoading: () => import("@/components/FullLoading.vue"),
@@ -20,6 +22,9 @@ export default {
     HeaderSection: () => import("@/components/HeaderSection.vue"),
     FooterSection: () => import("@/components/FooterSection.vue"),
   },
+  // mounted() {
+  //   this.$nextTick(() => AOS.init({ duration: 800 }));
+  // },
 };
 </script>
 <style lang="scss">

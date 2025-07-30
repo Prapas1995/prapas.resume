@@ -4,8 +4,8 @@
       <h1 class="tes-text-title text-center">Skills</h1>
       <div class="tes-flex-img-content text-center row">
         <div class="tes-flex-img-text col-md-5">
-          <img class="tes-img" :src="dev3" alt="" />
-           <ul class="tes-text-list m-t-12">
+          <img class="tes-img" :src="dev3" alt="" data-aos="fade" data-aos-once="true"/>
+           <ul class="tes-text-list m-t-12" data-aos="fade-up" data-aos-once="true">
             <li>
               <h3 class="tes-text-subtitle">● Currently</h3>
               <p class="tes-text-detail">
@@ -38,32 +38,22 @@
             </li>
            </ul>
         </div>
-        <div class="tes-flex-img-text col-md-7">
+        <div class="tes-flex-img-text col-md-7" data-aos="fade-down-left" data-aos-once="true">
           <div class="tes-flex-img-logo">
-            <!-- <div> -->
-              <img class="tes-img" :src="css" alt="" style="width: 98px;"/>
-              <img class="tes-img" :src="html" alt="" />
-              <img class="tes-img" :src="js" alt="" />
-            <!-- </div>
-            <div> -->
-              <img class="tes-img" :src="laravel" alt="" style="width: 183px;"/>
-              <img class="tes-img" :src="vue" alt="" />
-              <img class="tes-img" :src="react" alt="" />
-            <!-- </div>
-            <div> -->
-              <img class="tes-img" :src="php" alt="" />
-              <img class="tes-img" :src="c" alt="" />
-              <img class="tes-img" :src="node" alt="" />
-            <!-- </div>
-            <div> -->
-              <img class="tes-img" :src="mongodb" alt="" />
-              <img class="tes-img" :src="postgresql" alt="" style="width: 112px;"/>
-              <img class="tes-img" :src="sqlserver" alt="" />
-            <!-- </div>
-            <div> -->
-              <img class="tes-img" :src="salesforce" alt="" style="width: 202px;"/>
-              <img class="tes-img" :src="sitecore" alt="" />
-            <!-- </div> -->
+            <img class="tes-img" :src="css" alt="" style="width: 98px;" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="html" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="js" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="laravel" alt="" style="width: 183px;" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="vue" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="react" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="php" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="c" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="node" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="mongodb" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="postgresql" alt="" style="width: 112px;" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="sqlserver" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="salesforce" alt="" style="width: 202px;" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
+            <img class="tes-img" :src="sitecore" alt="" data-aos="flip-right" :data-aos-delay="`${getRandomDelay()}`" data-aos-once="true"/>
           </div>
         </div>
       </div>
@@ -72,6 +62,9 @@
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default {
   name: "TechStackSection",
   props: {
@@ -98,6 +91,14 @@ export default {
       vue: require("@/assets/images/vue.png"),
     };
   },
+  mounted() {
+    this.$nextTick(() => AOS.init({ duration: 800 }));
+  },
+  methods: {
+    getRandomDelay () {
+      return Math.floor(Math.random() * 15) * 100
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>

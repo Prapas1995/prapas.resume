@@ -44,6 +44,9 @@
         </div>
       </div>
     </div>
+    <transition name="slide-fade">
+      <i v-if="$store.state.htmlScrollTop > 500" class="material-icons pointer font-40 btn-top" @click="scrollToTop()">keyboard_arrow_up</i>
+    </transition>
   </div>
 </template>
 
@@ -70,9 +73,6 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    scrollTo(section) {
-      $("html").animate({ scrollTop: $(section).offset().top - 61 }, 1000);
-    },
     scrollToTop() {
       $("html").animate({ scrollTop: 0 }, 1000);
     },
@@ -186,6 +186,20 @@ export default {
   &.top {
     background-color: transparent;
     box-shadow: none;
+  }
+  .btn-top {
+    position: fixed;
+    bottom: 32px;
+    right: 96px;
+    padding: 3px;
+    background-color: white;
+    color: #343434;
+    border-radius: 50%;
+    transition: all 0.5s;
+    box-shadow: 1px 1px 4px 0px #afafafc4;
+    &:hover {
+      transform: scale(1.15);
+    }
   }
 }
 </style>

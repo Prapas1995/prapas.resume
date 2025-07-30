@@ -142,6 +142,9 @@ export default {
       const url = 'https://www.linkedin.com/in/prapas-jongkaenboon-aa703127b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app';
       return window.open(url, '_blank');
     },
+    scrollTo (section) {
+      $('html').animate({ scrollTop: $(section).offset().top - 80 }, 500)
+    }
   },
   watch: {
     "$store.state.isFullLoading"(val) {

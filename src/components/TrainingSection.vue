@@ -1,23 +1,29 @@
 <template>
   <div class="training-section">
     <div class="container m-t-60">
+      <div data-aos="flip-right" data-aos-once="true">
       <h1 class="ts-text-title text-center">Training</h1>
       <div class="text-center row">
         <div class="ts-flex-img-text col-md-12">
-          <img class="ts-img" :src="android" alt="">
+          <img class="ts-img" :src="android" alt="" />
           <h3 class="ts-text-subtitle">Android Application</h3>
           <p class="ts-text-detail">
-            9 – 11 November 2017: Programing training android application with android studio,
-            Create a application page register, Save data to mysql database and 
-            create a login page to the productdetail page to create a datalist.
+            9 – 11 November 2017: Programing training android application with
+            android studio, Create a application page register, Save data to
+            mysql database and create a login page to the productdetail page to
+            create a datalist.
           </p>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default {
   name: "TrainingSection",
   props: {
@@ -28,6 +34,9 @@ export default {
       isAnimate: false,
       android: require("@/assets/images/android.png"),
     };
+  },
+  mounted() {
+    this.$nextTick(() => AOS.init({ duration: 800 }));
   },
 };
 </script>
@@ -51,7 +60,8 @@ export default {
     .ts-img {
       width: 135px;
     }
-    h3,p {
+    h3,
+    p {
       color: #ffffff;
     }
     .ts-text-subtitle {
@@ -67,6 +77,5 @@ export default {
       }
     }
   }
-  
 }
 </style>
