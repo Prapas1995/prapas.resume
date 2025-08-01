@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkprapas_resume"]=self["webpackChunkprapas_resume"]||[]).push([[653],{3653:function(e,t,s){s.r(t),s.d(t,{default:function(){return p}});var n=function(){var e=this;e._self._c;return e._m(0)},c=[function(){var e=this,t=e._self._c;return t("div",{staticClass:"tech-stack-section"},[t("span",[e._v(" TechStackSection 084-3935488 ")])])}],a={name:"TechStackSection",props:{msg:String}},r=a,u=s(1656),i=(0,u.A)(r,n,c,!1,null,"358cfaa3",null),p=i.exports}}]);
-//# sourceMappingURL=653.9e375b3d.js.map
