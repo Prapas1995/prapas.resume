@@ -62,9 +62,6 @@
 </template>
 
 <script>
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 export default {
   name: "TechStackSection",
   props: {
@@ -90,9 +87,6 @@ export default {
       sqlserver: require("@/assets/images/sql-server.png"),
       vue: require("@/assets/images/vue.png"),
     };
-  },
-  mounted() {
-    this.$nextTick(() => AOS.init({ duration: 800 }));
   },
   methods: {
     getRandomDelay () {

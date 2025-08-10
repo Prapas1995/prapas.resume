@@ -21,9 +21,6 @@
 </template>
 
 <script>
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 export default {
   name: "TrainingSection",
   props: {
@@ -34,9 +31,6 @@ export default {
       isAnimate: false,
       android: require("@/assets/images/android.png"),
     };
-  },
-  mounted() {
-    this.$nextTick(() => AOS.init({ duration: 800 }));
   },
 };
 </script>

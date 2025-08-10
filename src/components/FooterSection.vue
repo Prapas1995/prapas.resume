@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import AOS from "aos";
-import "aos/dist/aos.css";
 export default {
   name: "FooterSection",
   props: {
@@ -24,9 +22,6 @@ export default {
       isAnimate: false,
       prapas: require("@/assets/images/prapas.jpeg"),
     };
-  },
-  mounted() {
-    this.$nextTick(() => AOS.init({ duration: 800 }));
   },
 };
 </script>
